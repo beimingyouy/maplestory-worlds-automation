@@ -1,0 +1,38 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Runtime state and diagnostics
+.v3_runtime/
+logs/
+*.log
+
+# Build and release artifacts
+build/
+dist/
+*.zip
+*.7z
+*.rar
+
+# IDE and local recovery data
+.idea/
+.vscode/
+.codex_restore/
+.codex_build_restore/
+skill_staging/
+.workbuddy/
+
+# Operating-system leftovers
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local shortcuts are machine-specific
+*.lnk

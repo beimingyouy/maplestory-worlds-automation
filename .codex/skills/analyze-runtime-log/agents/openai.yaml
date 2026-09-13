@@ -1,0 +1,4 @@
+interface:
+  display_name: "分析刷图运行日志"
+  short_description: "分析怪物坐标、战斗追怪、路线绳子与休息点异常证据链"
+  default_prompt: "使用 $analyze-runtime-log 分析最近的刷图日志并给出有证据的结论。"

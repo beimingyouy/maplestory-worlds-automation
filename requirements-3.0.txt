@@ -1,0 +1,12 @@
+PyQt5
+mss
+numpy
+opencv-python
+torch==2.5.1
+torchvision==0.20.1
+ultralytics
+pydirectinput
+keyboard
+pywin32
+requests
+Pillow

@@ -1,0 +1,3 @@
+打包自检通过
+legacy_engine=D:\PythonProject4\v3\legacy_engine.py
+资源根目录=D:\PythonProject4

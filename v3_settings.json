@@ -1,0 +1,38 @@
+{
+  "map_name": "自定义录制路线",
+  "mushroom_v3_route_file": "D:\\PythonProject4\\v3\\map\\recordings\\射手训练场1（8~30级）.json",
+  "test_mode": false,
+  "detection_only_mode": false,
+  "runtime_logging_enabled": true,
+  "wheel_detection_enabled": false,
+  "attack_distance": 250.0,
+  "attack_height": 80.0,
+  "yolo_confidence": 0.65,
+  "use_custom_templates": true,
+  "custom_mode": false,
+  "custom_left_position": null,
+  "custom_right_position": null,
+  "single_attack_key": "a",
+  "group_attack_key": "f",
+  "flash_key": "c",
+  "group_attack": false,
+  "auto_group_attack_over_count": 2,
+  "flash_enabled": false,
+  "draw_detection_boxes": true,
+  "red_percent": 35,
+  "blue_percent": 20,
+  "rope_delay": 0.4,
+  "rope_rest_interval_minutes": 20.0,
+  "rope_rest_duration_minutes": 4.0,
+  "ignored_platform_numbers": [
+    2,
+    3,
+    4
+  ],
+  "scheduled_keys": [
+    [
+      "3",
+      300.0
+    ]
+  ]
+}

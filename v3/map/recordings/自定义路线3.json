@@ -1,0 +1,3018 @@
+{
+  "version": 7,
+  "schema_version": 1,
+  "map_name": "自定义录制路线",
+  "created_at": "2026-08-14T02:09:48",
+  "coordinate_space": "screen_minimap_absolute",
+  "record_fps": 30,
+  "recording_mode": "segmented_graph",
+  "route_profile": "strict_recorded",
+  "coordinate_deduplicated": true,
+  "rope_start_anchor_recorded": true,
+  "rope_entry_offset_x": 2,
+  "rope_bottom_is_not_jump_point": true,
+  "right_return_mode": "legacy_single_marker_compatible",
+  "walk_off_mode": "directional_recorded_landing",
+  "minimap_monitor": {
+    "top": 110,
+    "left": 20,
+    "width": 270,
+    "height": 190
+  },
+  "playback_mode": "assembled_segment_loop",
+  "movement_source": "json_only",
+  "dynamic_rope_geometry": true,
+  "chase_enabled": false,
+  "recording_status": "needs_review",
+  "recording_warnings": [
+    {
+      "code": "unmatched_rope_platforms",
+      "severity": "warning",
+      "segment_ids": [
+        2
+      ],
+      "message": "绳子段[2]没有同时匹配到上下平台；本次坐标已保留，可根据JSON继续分析。建议确认双方平台均已录制，并从绳底完整爬到绳顶。",
+      "tolerance": {
+        "lower_platform_y": 36,
+        "upper_platform_y": 12,
+        "platform_x": 16
+      }
+    }
+  ],
+  "platform_recording_cleanup": {
+    "1": {
+      "baseline_y": 159,
+      "original_points": 92,
+      "retained_points": 92,
+      "removed_points": 0,
+      "surface_min_y": 158,
+      "surface_max_y": 159,
+      "slope_points": 8,
+      "departed_tail_removed": false
+    }
+  },
+  "points": [
+    {
+      "x": 48,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 172,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 49,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 282,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 50,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 407,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 51,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 547,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 52,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 641,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 53,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 797,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 54,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 938,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 55,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 1063,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 56,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 1188,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 57,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 1282,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 58,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2188,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 59,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2329,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 60,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2454,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 61,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2579,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 62,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2735,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 63,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2844,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 64,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2985,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 65,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 3094,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 66,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 3250,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 67,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4125,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 68,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4235,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 69,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4375,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 70,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4500,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 71,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4641,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 70,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4688,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 69,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4782,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 72,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 5360,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 73,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 5500,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 74,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 5641,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 75,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 5766,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 76,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 5860,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 77,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 6000,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 78,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 6110,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 79,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 6266,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 79,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 6407,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 78,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 6454,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 80,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7000,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 81,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7125,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 82,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7219,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 83,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7360,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 84,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7516,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 85,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7657,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 86,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7907,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 87,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7954,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 88,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8000,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 89,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8079,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 90,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8125,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 91,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8485,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 92,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8579,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 93,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8719,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 94,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8860,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 95,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 9000,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 96,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 9125,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 97,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 9235,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 98,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 9391,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 99,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 10266,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 100,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 10407,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 101,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 10532,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 102,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 10657,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 103,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 10922,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 104,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 10969,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 105,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 11110,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 104,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 11157,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 103,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 11235,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 102,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 11297,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 106,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 12532,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 107,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 12672,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 108,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 12766,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 109,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 12907,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 110,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13047,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 111,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13172,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 112,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13297,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 113,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13422,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 114,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13547,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 115,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13688,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 116,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13813,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 117,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13922,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 118,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 14063,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 119,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 14172,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1",
+      "synthetic": false
+    },
+    {
+      "x": 90,
+      "y": 156,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 22016,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null,
+      "synthetic": false
+    },
+    {
+      "x": 90,
+      "y": 155,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 22297,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null,
+      "synthetic": false
+    },
+    {
+      "x": 90,
+      "y": 154,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 22485,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null,
+      "synthetic": false
+    },
+    {
+      "x": 90,
+      "y": 153,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 22625,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null,
+      "synthetic": false
+    },
+    {
+      "x": 90,
+      "y": 152,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 22797,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null,
+      "synthetic": false
+    },
+    {
+      "x": 90,
+      "y": 151,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 22954,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null,
+      "synthetic": false
+    },
+    {
+      "x": 90,
+      "y": 150,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 23110,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null,
+      "synthetic": false
+    },
+    {
+      "x": 90,
+      "y": 149,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 23266,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null,
+      "synthetic": false
+    }
+  ],
+  "raw_points": [
+    {
+      "x": 48,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 172,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 49,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 282,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 50,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 407,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 51,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 547,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 52,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 641,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 53,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 797,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 54,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 938,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 55,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 1063,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 56,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 1188,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 57,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 1282,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 58,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2188,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 59,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2329,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 60,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2454,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 61,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2579,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 62,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2735,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 63,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2844,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 64,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 2985,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 65,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 3094,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 66,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 3250,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 67,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4125,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 68,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4235,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 69,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4375,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 70,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4500,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 71,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4641,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 70,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4688,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 69,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 4782,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 72,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 5360,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 73,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 5500,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 74,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 5641,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 75,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 5766,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 76,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 5860,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 77,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 6000,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 78,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 6110,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 79,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 6266,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 79,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 6407,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 78,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 6454,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 80,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7000,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 81,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7125,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 82,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7219,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 83,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7360,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 84,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7516,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 85,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7657,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 86,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7907,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 87,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 7954,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 88,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8000,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 89,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8079,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 90,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8125,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 91,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8485,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 92,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8579,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 93,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8719,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 94,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 8860,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 95,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 9000,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 96,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 9125,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 97,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 9235,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 98,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 9391,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 99,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 10266,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 100,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 10407,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 101,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 10532,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 102,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 10657,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 103,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 10922,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 104,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 10969,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 105,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 11110,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 104,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 11157,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 103,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 11235,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 102,
+      "y": 158,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 11297,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 106,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 12532,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 107,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 12672,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 108,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 12766,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 109,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 12907,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 110,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13047,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 111,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13172,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 112,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13297,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 113,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13422,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 114,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13547,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 115,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13688,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 116,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13813,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 117,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 13922,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 118,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 14063,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 119,
+      "y": 159,
+      "command": "right none none",
+      "kind": "platform",
+      "elapsed_ms": 14172,
+      "segment_id": 1,
+      "segment_type": "platform",
+      "platform_id": "平台1"
+    },
+    {
+      "x": 90,
+      "y": 156,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 22016,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null
+    },
+    {
+      "x": 90,
+      "y": 155,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 22297,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null
+    },
+    {
+      "x": 90,
+      "y": 154,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 22485,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null
+    },
+    {
+      "x": 90,
+      "y": 153,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 22625,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null
+    },
+    {
+      "x": 90,
+      "y": 152,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 22797,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null
+    },
+    {
+      "x": 90,
+      "y": 151,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 22954,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null
+    },
+    {
+      "x": 90,
+      "y": 150,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 23110,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null
+    },
+    {
+      "x": 90,
+      "y": 149,
+      "command": "none up none",
+      "kind": "rope",
+      "elapsed_ms": 23266,
+      "segment_id": 2,
+      "segment_type": "rope",
+      "platform_id": null
+    }
+  ],
+  "segments": [
+    {
+      "id": 1,
+      "order": 1,
+      "type": "platform",
+      "point_count": 79,
+      "x_range": [
+        48,
+        119
+      ],
+      "y_range": [
+        158,
+        159
+      ],
+      "representative_x": 83,
+      "representative_y": 159,
+      "start": [
+        48,
+        159
+      ],
+      "end": [
+        119,
+        159
+      ],
+      "slope_compatible": true,
+      "horizontal_span": 71,
+      "vertical_span": 1,
+      "max_consecutive_y_step": 1,
+      "platform_id": "平台1"
+    },
+    {
+      "id": 2,
+      "order": 2,
+      "type": "rope",
+      "point_count": 8,
+      "x_range": [
+        90,
+        90
+      ],
+      "y_range": [
+        149,
+        156
+      ],
+      "representative_x": 90,
+      "representative_y": 152,
+      "start": [
+        90,
+        156
+      ],
+      "end": [
+        90,
+        149
+      ],
+      "slope_compatible": true,
+      "horizontal_span": 0,
+      "vertical_span": 7,
+      "max_consecutive_y_step": 1,
+      "rope_x": 90,
+      "top_y": 149,
+      "bottom_y": 156,
+      "fuzzy_x_range": [
+        89,
+        91
+      ]
+    }
+  ],
+  "route_graph": {
+    "platforms": [
+      {
+        "id": 1,
+        "order": 1,
+        "type": "platform",
+        "point_count": 79,
+        "x_range": [
+          48,
+          119
+        ],
+        "y_range": [
+          158,
+          159
+        ],
+        "representative_x": 83,
+        "representative_y": 159,
+        "start": [
+          48,
+          159
+        ],
+        "end": [
+          119,
+          159
+        ],
+        "slope_compatible": true,
+        "horizontal_span": 71,
+        "vertical_span": 1,
+        "max_consecutive_y_step": 1,
+        "platform_id": "平台1"
+      }
+    ],
+    "ropes": [
+      {
+        "id": 2,
+        "order": 2,
+        "type": "rope",
+        "point_count": 8,
+        "x_range": [
+          90,
+          90
+        ],
+        "y_range": [
+          149,
+          156
+        ],
+        "representative_x": 90,
+        "representative_y": 152,
+        "start": [
+          90,
+          156
+        ],
+        "end": [
+          90,
+          149
+        ],
+        "slope_compatible": true,
+        "horizontal_span": 0,
+        "vertical_span": 7,
+        "max_consecutive_y_step": 1,
+        "rope_x": 90,
+        "top_y": 149,
+        "bottom_y": 156,
+        "fuzzy_x_range": [
+          89,
+          91
+        ]
+      }
+    ],
+    "connections": [],
+    "return_transitions": [],
+    "unmatched_rope_ids": [
+      2
+    ],
+    "unmatched_transition_ids": [],
+    "fuzzy_tolerance": {
+      "platform_y": 8,
+      "upper_platform_y": 12,
+      "lower_platform_y": 36,
+      "platform_x": 16,
+      "rope_x": 1,
+      "rope_top_y": 2,
+      "rope_bottom_y": 3
+    }
+  },
+  "transition_probabilities": {
+    "down_jump": 34,
+    "walk_off_left": 33,
+    "walk_off_right": 33
+  },
+  "route_variants": [
+    {
+      "name": "ascent_only_incomplete_return",
+      "probability": 100,
+      "transition_segment_id": null,
+      "transition_segment_ids": [],
+      "closed_loop": false,
+      "points": [
+        {
+          "x": 48,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 172,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 49,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 282,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 50,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 407,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 51,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 547,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 52,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 641,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 53,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 797,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 54,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 938,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 55,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 1063,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 56,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 1188,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 57,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 1282,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 58,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 2188,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 59,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 2329,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 60,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 2454,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 61,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 2579,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 62,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 2735,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 63,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 2844,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 64,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 2985,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 65,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 3094,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 66,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 3250,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 67,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 4125,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 68,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 4235,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 69,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 4375,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 70,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 4500,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 71,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 4641,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 70,
+          "y": 158,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 4688,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 69,
+          "y": 158,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 4782,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 72,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 5360,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 73,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 5500,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 74,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 5641,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 75,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 5766,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 76,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 5860,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 77,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 6000,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 78,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 6110,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 79,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 6266,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 79,
+          "y": 158,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 6407,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 78,
+          "y": 158,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 6454,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 80,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 7000,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 81,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 7125,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 82,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 7219,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 83,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 7360,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 84,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 7516,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 85,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 7657,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 86,
+          "y": 158,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 7907,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 87,
+          "y": 158,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 7954,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 88,
+          "y": 158,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 8000,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 89,
+          "y": 158,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 8079,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 90,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 8125,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 91,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 8485,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 92,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 8579,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 93,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 8719,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 94,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 8860,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 95,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 9000,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 96,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 9125,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 97,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 9235,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 98,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 9391,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 99,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 10266,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 100,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 10407,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 101,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 10532,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 102,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 10657,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 103,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 10922,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 104,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 10969,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 105,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 11110,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 104,
+          "y": 158,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 11157,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 103,
+          "y": 158,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 11235,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 102,
+          "y": 158,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 11297,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 106,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 12532,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 107,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 12672,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 108,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 12766,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 109,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 12907,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 110,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 13047,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 111,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 13172,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 112,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 13297,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 113,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 13422,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 114,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 13547,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 115,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 13688,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 116,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 13813,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 117,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 13922,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 118,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 14063,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 119,
+          "y": 159,
+          "command": "right none none",
+          "kind": "platform",
+          "elapsed_ms": 14172,
+          "segment_id": 1,
+          "segment_type": "platform",
+          "platform_id": "平台1",
+          "synthetic": false
+        },
+        {
+          "x": 90,
+          "y": 156,
+          "command": "none up none",
+          "kind": "rope",
+          "elapsed_ms": 22016,
+          "segment_id": 2,
+          "segment_type": "rope",
+          "platform_id": null,
+          "synthetic": false
+        },
+        {
+          "x": 90,
+          "y": 155,
+          "command": "none up none",
+          "kind": "rope",
+          "elapsed_ms": 22297,
+          "segment_id": 2,
+          "segment_type": "rope",
+          "platform_id": null,
+          "synthetic": false
+        },
+        {
+          "x": 90,
+          "y": 154,
+          "command": "none up none",
+          "kind": "rope",
+          "elapsed_ms": 22485,
+          "segment_id": 2,
+          "segment_type": "rope",
+          "platform_id": null,
+          "synthetic": false
+        },
+        {
+          "x": 90,
+          "y": 153,
+          "command": "none up none",
+          "kind": "rope",
+          "elapsed_ms": 22625,
+          "segment_id": 2,
+          "segment_type": "rope",
+          "platform_id": null,
+          "synthetic": false
+        },
+        {
+          "x": 90,
+          "y": 152,
+          "command": "none up none",
+          "kind": "rope",
+          "elapsed_ms": 22797,
+          "segment_id": 2,
+          "segment_type": "rope",
+          "platform_id": null,
+          "synthetic": false
+        },
+        {
+          "x": 90,
+          "y": 151,
+          "command": "none up none",
+          "kind": "rope",
+          "elapsed_ms": 22954,
+          "segment_id": 2,
+          "segment_type": "rope",
+          "platform_id": null,
+          "synthetic": false
+        },
+        {
+          "x": 90,
+          "y": 150,
+          "command": "none up none",
+          "kind": "rope",
+          "elapsed_ms": 23110,
+          "segment_id": 2,
+          "segment_type": "rope",
+          "platform_id": null,
+          "synthetic": false
+        },
+        {
+          "x": 90,
+          "y": 149,
+          "command": "none up none",
+          "kind": "rope",
+          "elapsed_ms": 23266,
+          "segment_id": 2,
+          "segment_type": "rope",
+          "platform_id": null,
+          "synthetic": false
+        }
+      ]
+    }
+  ],
+  "rest_point": {
+    "x": 90,
+    "y": 150,
+    "approach_y": 158,
+    "interval_minutes": 30.0,
+    "duration_minutes": 5.0,
+    "jump_key": "c",
+    "recorded_at": "2026-08-14T02:09:53"
+  }
+}

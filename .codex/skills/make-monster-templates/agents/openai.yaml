@@ -1,0 +1,4 @@
+interface:
+  display_name: "怪物识别模板"
+  short_description: "把游戏怪物原图拆分为稳定且保持原像素的小尺寸识别模板"
+  default_prompt: "Use $make-monster-templates to split each supplied monster image into eight stable guai recognition templates."

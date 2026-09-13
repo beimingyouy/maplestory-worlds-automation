@@ -1,0 +1,4 @@
+interface:
+  display_name: "模拟录制地图刷图"
+  short_description: "模拟录制路线闭环、绳子、平台忽略、坐标抖动和战斗恢复卡点"
+  default_prompt: "使用 $simulate-recorded-route 分析当前录制地图 JSON 是否存在刷图卡点。"
