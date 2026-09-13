@@ -318,9 +318,18 @@ try {
     $selfTestProcess = Start-Process `
         -FilePath $stageExePath `
         -ArgumentList "--package-self-test" `
-        -Wait `
         -PassThru `
         -WindowStyle Hidden
+    # The self-test process may hang; fail the build instead of waiting forever.
+    $selfTestTimeoutSeconds = 120
+    if (-not $selfTestProcess.WaitForExit($selfTestTimeoutSeconds * 1000)) {
+        $selfTestProcess.Kill()
+        $selfTestProcess.WaitForExit()
+        throw (
+            "Packaged resource self-test timed out after {0}s" -f
+            $selfTestTimeoutSeconds
+        )
+    }
     if ($selfTestProcess.ExitCode -ne 0) {
         throw (
             "Packaged resource self-test failed with exit code: {0}" -f
@@ -329,6 +338,10 @@ try {
     }
 
     Write-Step "Replacing the dist package with the verified staged build"
+    # Move-Item does not create the parent directory; the first build has no dist.
+    if (-not (Test-Path -LiteralPath $distRoot -PathType Container)) {
+        New-Item -ItemType Directory -Path $distRoot -Force | Out-Null
+    }
     Remove-SafeDirectory $previousPackageDir
     $oldPackageMoved = $false
     try {

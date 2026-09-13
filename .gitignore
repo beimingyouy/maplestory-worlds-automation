@@ -17,6 +17,7 @@ logs/
 # Build and release artifacts
 build/
 dist/
+.build_release_stage/
 *.zip
 *.7z
 *.rar

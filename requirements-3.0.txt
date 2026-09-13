@@ -1,12 +1,48 @@
-PyQt5
-mss
-numpy
-opencv-python
+# QQ炫舞 3.0 依赖清单
+#
+# 运行环境要求（重要）：
+#   - 操作系统：Windows 10 / 11（依赖 win32gui、pydirectinput，无法跨平台）
+#   - Python：3.12 x64（已验证 3.12.10）。不要用 32 位 Python 或 3.13：
+#     32 位无法加载当前 PyTorch；3.13 没有 torch==2.5.1 的官方 wheel。
+#   - 推理设备：CPU（torch 2.5.1 组合已验证，无需 CUDA）
+#
+# 安装方式：
+#   python -m venv .venv
+#   .\.venv\Scripts\python.exe -m pip install -r requirements-3.0.txt
+#   国内可加 -i https://pypi.tuna.tsinghua.edu.cn/simple 加速
+#
+# 以下版本均在 Python 3.12.10 x64 上实际安装并导入验证通过。
+
+# ---------- 界面 ----------
+PyQt5==5.15.11
+PyQt5-Qt5==5.15.2
+PyQt5_sip==12.19.0
+
+# ---------- 屏幕捕获与图像处理 ----------
+mss==10.2.0
+opencv-python==5.0.0.93
+Pillow==12.3.0
+# numpy 上限 2.2.*：PyInstaller 6.11.1 的 numpy 钩子不认识 2.5.x 的目录结构，
+# 会漏打 numpy/_core 下的模块，打包后的 EXE 启动即报
+# ModuleNotFoundError: No module named 'numpy._core._exceptions'。
+# 若需升级 numpy，请同步升级 PyInstaller 并重新验证打包自检。
+numpy==2.2.6
+
+# ---------- 深度学习推理 ----------
+# torch 与 torchvision 必须成对升级，改动版本后需重新验证打包后的 DLL 兼容性。
 torch==2.5.1
 torchvision==0.20.1
-ultralytics
-pydirectinput
-keyboard
-pywin32
-requests
-Pillow
+ultralytics==8.4.150
+
+# ---------- 输入模拟与系统接口 ----------
+pydirectinput==1.0.4
+keyboard==0.13.5
+pywin32==312
+
+# ---------- 网络 ----------
+requests==2.34.2
+
+# ---------- 打包（仅构建 EXE 需要，运行时可省略） ----------
+# 一键打包.bat 会调用 .venv\Scripts\pyinstaller.exe，缺少时会直接报错退出。
+# 6.22.3 起内置适配 numpy 2.5.x 的钩子，旧版本会漏打 numpy._core._exceptions。
+pyinstaller==6.22.3
