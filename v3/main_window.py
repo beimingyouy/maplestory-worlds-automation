@@ -43,6 +43,7 @@ from PyQt5.QtWidgets import (
 )
 
 from .config import AppConfig, ConfigStore
+from .branding import display_name
 from .monster_atlas_dialog import MonsterAtlasDialog
 from .public.monster_detection import (
     custom_template_directory,
@@ -223,7 +224,7 @@ class MainWindow(QMainWindow):
         self.route_recorder = RouteRecorderService(self.store.path.parent)
         self.add_close_callback(lambda: self.route_recorder.stop(save=False))
 
-        title = "QQ炫舞 3.0"
+        title = display_name()
         if self.test_mode:
             title += " - 截图测试模式"
         self.setWindowTitle(title)
@@ -286,7 +287,7 @@ class MainWindow(QMainWindow):
         layout.setContentsMargins(20, 15, 20, 15)
 
         title_layout = QVBoxLayout()
-        title = QLabel("QQ炫舞")
+        title = QLabel(display_name())
         title.setObjectName("appTitle")
         subtitle_text = "兼容 1.9 全部地图逻辑 · 分层架构 · 安全启停"
         if self.test_mode:
@@ -2907,10 +2908,12 @@ class MainWindow(QMainWindow):
             mode_name = "截图测试模式"
         else:
             mode_name = "正常模式"
-        self.setWindowTitle("QQ炫舞 3.0 - {}".format(mode_name))
+        self.setWindowTitle("{} - {}".format(display_name(), mode_name))
         application = QApplication.instance()
         if application is not None:
-            application.setApplicationName("QQ炫舞 3.0 - {}".format(mode_name))
+            application.setApplicationName(
+                "{} - {}".format(display_name(), mode_name)
+            )
 
         if self.detection_only_mode:
             subtitle = "纯识别测试 · 只截图和识别怪物 · 不发送任何游戏按键"

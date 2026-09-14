@@ -18,6 +18,7 @@ logs/
 build/
 dist/
 .build_release_stage/
+.build_release_identity/
 *.zip
 *.7z
 *.rar

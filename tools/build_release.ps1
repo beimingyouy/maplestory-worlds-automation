@@ -14,12 +14,12 @@ $huntingGroundDirectoryName = (
 ) + "2"
 $specPath = Join-Path $projectRoot "$packageName.spec"
 $pyinstallerPath = Join-Path $projectRoot ".venv\Scripts\pyinstaller.exe"
+$venvPythonPath = Join-Path $projectRoot ".venv\Scripts\python.exe"
+$identityToolPath = Join-Path $PSScriptRoot "build_randomize.py"
+$identityDir = Join-Path $projectRoot ".build_release_identity"
 $distRoot = Join-Path $projectRoot "dist"
-$finalPackageDir = Join-Path $distRoot $packageName
-$previousPackageDir = Join-Path $distRoot "$packageName.previous"
 $stageRoot = Join-Path $projectRoot ".build_release_stage"
 $stageDistRoot = Join-Path $stageRoot "dist"
-$stagePackageDir = Join-Path $stageDistRoot $packageName
 $preserveRoot = Join-Path $stageRoot "preserve"
 $templateBackupDir = Join-Path $preserveRoot "custom_templates"
 $routeBackupDir = Join-Path $preserveRoot "recordings"
@@ -27,6 +27,13 @@ $settingsBackupPath = Join-Path $preserveRoot "v3_settings.json"
 $readmeBackupPath = Join-Path $preserveRoot "README_3.0.md"
 $monsterLibrarySource = Join-Path $projectRoot "img\monsters"
 $routeRecordingsSource = Join-Path $projectRoot "v3\map\recordings"
+
+# Every build gets a fresh randomized identity (name / icon / copyright).
+# These are populated at runtime, after the identity has been generated.
+$outputPackageName = $null
+$finalPackageDir = $null
+$stagePackageDir = $null
+$currentPackageDir = $null
 
 function Write-Step {
     param([string]$Message)
@@ -122,8 +129,13 @@ function Merge-DirectoryTree {
 }
 
 function Find-TemplateSource {
-    $candidates = @(
-        (Join-Path $finalPackageDir ("img\" + $customDirectoryName)),
+    $candidates = @()
+    if ($currentPackageDir) {
+        $candidates += (Join-Path $currentPackageDir (
+            "img\" + $customDirectoryName
+        ))
+    }
+    $candidates += @(
         (Join-Path $projectRoot (
             "img\" + $customDirectoryName + "\" + $huntingGroundDirectoryName
         )),
@@ -149,14 +161,24 @@ function Copy-InternalTemplates {
         Copy-Item -Destination $TargetDirectory -Force
 }
 
-function Restore-PreviousPackage {
-    if (Test-Path -LiteralPath $previousPackageDir -PathType Container) {
-        if (Test-Path -LiteralPath $finalPackageDir) {
-            Remove-SafeDirectory $finalPackageDir
-        }
-        Move-Item -LiteralPath $previousPackageDir -Destination $finalPackageDir
-        Write-Host "The previous working package has been restored." -ForegroundColor Yellow
+function Restore-PreviousPackages {
+    # Each build uses a random name, so any number of old packages may sit
+    # in dist as "<name>.previous" after a failed replacement. Move them all
+    # back to their original names.
+    if (-not (Test-Path -LiteralPath $distRoot -PathType Container)) {
+        return
     }
+    Get-ChildItem -LiteralPath $distRoot -Directory |
+        Where-Object { $_.Name.EndsWith(".previous") } |
+        ForEach-Object {
+            $originalName = $_.Name.Substring(
+                0, $_.Name.Length - ".previous".Length
+            )
+            $originalPath = Join-Path $distRoot $originalName
+            if (-not (Test-Path -LiteralPath $originalPath)) {
+                Move-Item -LiteralPath $_.FullName -Destination $originalPath
+            }
+        }
 }
 
 try {
@@ -166,6 +188,12 @@ try {
     }
     if (-not (Test-Path -LiteralPath $pyinstallerPath -PathType Leaf)) {
         throw "PyInstaller not found: $pyinstallerPath"
+    }
+    if (-not (Test-Path -LiteralPath $venvPythonPath -PathType Leaf)) {
+        throw "Virtual environment Python not found: $venvPythonPath"
+    }
+    if (-not (Test-Path -LiteralPath $identityToolPath -PathType Leaf)) {
+        throw "Random identity tool not found: $identityToolPath"
     }
     $sourceMonsterCount = Get-MonsterImageCount $monsterLibrarySource
     $sourceRouteCount = Get-RouteJsonCount $routeRecordingsSource
@@ -178,15 +206,56 @@ try {
     Write-Host "Monster atlas source images: $sourceMonsterCount"
     Write-Host "Route JSON source files: $sourceRouteCount"
 
+    Write-Step "Generating the randomized build identity (name, icon, copyright)"
+    if (Test-Path -LiteralPath $identityDir) {
+        Remove-SafeDirectory $identityDir
+    }
+    $identityJson = (& $venvPythonPath $identityToolPath `
+        --output-dir $identityDir) | Out-String
+    if ($LASTEXITCODE -ne 0) {
+        throw "Random identity generation failed with exit code: $LASTEXITCODE"
+    }
+    $identity = $identityJson | ConvertFrom-Json
+    $outputPackageName = [string]$identity.name
+    $iconFilePath = [string]$identity.icon
+    $versionFilePath = [string]$identity.version_file
+    if ([string]::IsNullOrWhiteSpace($outputPackageName)) {
+        throw "Random identity tool returned an empty package name."
+    }
+    Write-Host "Package name for this build: $outputPackageName"
+    Write-Host "Icon resource: $iconFilePath"
+    Write-Host "Version resource: $versionFilePath"
+
+    $stagePackageDir = Join-Path $stageDistRoot $outputPackageName
+    $finalPackageDir = Join-Path $distRoot $outputPackageName
+
+    # Builds rename the package every time, so the previous package may sit
+    # under a different (older random) name. Detect all live packages in
+    # dist; the newest one is the "current package" whose settings, routes,
+    # and templates must be carried over.
+    $existingPackageDirs = @()
+    $currentPackageDir = $null
+    if (Test-Path -LiteralPath $distRoot -PathType Container) {
+        $existingPackageDirs = @(
+            Get-ChildItem -LiteralPath $distRoot -Directory |
+                Where-Object { -not $_.Name.EndsWith(".previous") } |
+                Sort-Object -Property LastWriteTime -Descending
+        )
+    }
+    if ($existingPackageDirs.Count -gt 0) {
+        $currentPackageDir = $existingPackageDirs[0].FullName
+        Write-Host "Current package to carry over: $currentPackageDir"
+    }
+
     Remove-SafeDirectory $stageRoot
     New-Item -ItemType Directory -Path $preserveRoot -Force | Out-Null
     New-Item -ItemType Directory -Path $stageDistRoot -Force | Out-Null
 
     Write-Step "Preserving settings, documentation, and custom templates"
-    $settingsCandidates = @(
-        (Join-Path $projectRoot "v3_settings.json"),
-        (Join-Path $finalPackageDir "v3_settings.json")
-    )
+    $settingsCandidates = @(Join-Path $projectRoot "v3_settings.json")
+    if ($currentPackageDir) {
+        $settingsCandidates += (Join-Path $currentPackageDir "v3_settings.json")
+    }
     foreach ($currentSettings in $settingsCandidates) {
         if (Test-Path -LiteralPath $currentSettings -PathType Leaf) {
             Copy-Item -LiteralPath $currentSettings -Destination $settingsBackupPath -Force
@@ -195,10 +264,11 @@ try {
         }
     }
 
-    $readmeCandidates = @(
-        (Join-Path $finalPackageDir "README_3.0.md"),
-        (Join-Path $projectRoot "README_3.0.md")
-    )
+    $readmeCandidates = @()
+    if ($currentPackageDir) {
+        $readmeCandidates += (Join-Path $currentPackageDir "README_3.0.md")
+    }
+    $readmeCandidates += (Join-Path $projectRoot "README_3.0.md")
     foreach ($candidate in $readmeCandidates) {
         if (Test-Path -LiteralPath $candidate -PathType Leaf) {
             Copy-Item -LiteralPath $candidate -Destination $readmeBackupPath -Force
@@ -219,8 +289,12 @@ try {
         Write-Host "No guai*.png files found; spec defaults will be used." -ForegroundColor Yellow
     }
 
-    $currentRouteDirectory = Join-Path $finalPackageDir "v3\map\recordings"
-    if (Test-Path -LiteralPath $currentRouteDirectory -PathType Container) {
+    $currentRouteDirectory = $null
+    if ($currentPackageDir) {
+        $currentRouteDirectory = Join-Path $currentPackageDir "v3\map\recordings"
+    }
+    if ($null -ne $currentRouteDirectory -and
+        (Test-Path -LiteralPath $currentRouteDirectory -PathType Container)) {
         Copy-DirectoryTree $currentRouteDirectory $routeBackupDir
         Write-Host (
             "Preserved {0} external route JSON files from the current package." -f
@@ -234,12 +308,15 @@ try {
     New-Item -ItemType Directory -Path $env:YOLO_CONFIG_DIR -Force | Out-Null
     New-Item -ItemType Directory -Path $env:MPLCONFIGDIR -Force | Out-Null
 
+    $env:V3_PACKAGE_NAME = $outputPackageName
+    $env:V3_ICON_PATH = $iconFilePath
+    $env:V3_VERSION_FILE = $versionFilePath
     & $pyinstallerPath --noconfirm --distpath $stageDistRoot $specPath
     if ($LASTEXITCODE -ne 0) {
         throw "PyInstaller failed with exit code: $LASTEXITCODE"
     }
 
-    $stageExePath = Join-Path $stagePackageDir "$packageName.exe"
+    $stageExePath = Join-Path $stagePackageDir "$outputPackageName.exe"
     if (-not (Test-Path -LiteralPath $stageExePath -PathType Leaf)) {
         throw "Build finished without producing the expected EXE: $stageExePath"
     }
@@ -342,30 +419,40 @@ try {
     if (-not (Test-Path -LiteralPath $distRoot -PathType Container)) {
         New-Item -ItemType Directory -Path $distRoot -Force | Out-Null
     }
-    Remove-SafeDirectory $previousPackageDir
-    $oldPackageMoved = $false
+    $oldPackageBackups = @()
     try {
-        if (Test-Path -LiteralPath $finalPackageDir -PathType Container) {
-            Move-Item -LiteralPath $finalPackageDir -Destination $previousPackageDir
-            $oldPackageMoved = $true
-        }
+        # Park every live package (any name) as "<name>.previous", then move
+        # the fresh one in. Old backups are dropped only after success.
+        Get-ChildItem -LiteralPath $distRoot -Directory |
+            Where-Object { -not $_.Name.EndsWith(".previous") } |
+            ForEach-Object {
+                $backupPath = Join-Path $distRoot ($_.Name + ".previous")
+                Remove-SafeDirectory $backupPath
+                Move-Item -LiteralPath $_.FullName -Destination $backupPath
+                $oldPackageBackups += $backupPath
+            }
         Move-Item -LiteralPath $stagePackageDir -Destination $finalPackageDir
 
-        $finalExePath = Join-Path $finalPackageDir "$packageName.exe"
+        $finalExePath = Join-Path $finalPackageDir "$outputPackageName.exe"
         if (-not (Test-Path -LiteralPath $finalExePath -PathType Leaf)) {
-            throw "The staged package has no EXE; restoring the previous package."
+            throw "The staged package has no EXE; restoring the previous packages."
         }
-        if ($oldPackageMoved) {
-            Remove-SafeDirectory $previousPackageDir
+        foreach ($backupPath in $oldPackageBackups) {
+            Remove-SafeDirectory $backupPath
         }
     }
     catch {
-        Restore-PreviousPackage
+        if (Test-Path -LiteralPath $finalPackageDir -PathType Container) {
+            # A partially moved package is worthless; drop it so the old
+            # packages can be restored to their original names.
+            Remove-SafeDirectory $finalPackageDir
+        }
+        Restore-PreviousPackages
         throw
     }
 
     Write-Step "Build completed"
-    $finalExePath = Join-Path $finalPackageDir "$packageName.exe"
+    $finalExePath = Join-Path $finalPackageDir "$outputPackageName.exe"
     $exe = Get-Item -LiteralPath $finalExePath
     $hash = Get-FileHash -LiteralPath $finalExePath -Algorithm SHA256
     $externalCount = Get-TemplateCount (
@@ -405,6 +492,7 @@ try {
     Write-Host "Internal route JSON files: $finalInternalRouteCount"
 
     Remove-SafeDirectory $stageRoot
+    Remove-SafeDirectory $identityDir
     exit 0
 }
 catch {

@@ -1,11 +1,23 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+import os
 from pathlib import Path
 
 from PyInstaller.utils.hooks import collect_all, collect_submodules
 
 
 project_root = Path(SPECPATH)
+
+# 构建脚本（tools/build_release.ps1）会先生成随机构建身份（名称/图标/版权），
+# 再通过以下环境变量传入。手动执行 pyinstaller 时若未设置，则回退到默认名称，
+# 且不带图标与版本资源。
+_package_name = os.environ.get("V3_PACKAGE_NAME") or "QQ炫舞3.0"
+_icon_path = os.environ.get("V3_ICON_PATH") or None
+_version_file_path = os.environ.get("V3_VERSION_FILE") or None
+if _icon_path and not Path(_icon_path).is_file():
+    _icon_path = None
+if _version_file_path and not Path(_version_file_path).is_file():
+    _version_file_path = None
 
 ultralytics_datas, ultralytics_binaries, ultralytics_hiddenimports = collect_all(
     "ultralytics",
@@ -87,7 +99,9 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name="QQ炫舞3.0",
+    name=_package_name,
+    icon=_icon_path,
+    version=_version_file_path,
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -107,5 +121,5 @@ coll = COLLECT(
     strip=False,
     upx=False,
     upx_exclude=[],
-    name="QQ炫舞3.0",
+    name=_package_name,
 )

@@ -6,6 +6,7 @@ from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QApplication, QMessageBox
 
 from .config import ConfigStore, default_config_path
+from .branding import display_name
 from .hotkeys import HotkeyService
 from .logging_bridge import LogRedirector
 from .main_window import MainWindow
@@ -25,7 +26,7 @@ def main(test_mode: bool = False) -> int:
         QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
 
     app = QApplication(sys.argv)
-    app.setApplicationName("QQ炫舞 3.0")
+    app.setApplicationName(display_name())
     app.setFont(QFont("Microsoft YaHei UI", 10))
     app.setStyleSheet(APP_STYLE)
 
@@ -38,7 +39,7 @@ def main(test_mode: bool = False) -> int:
         if window.detection_only_mode
         else ("截图测试模式" if window.test_mode else "正常模式")
     )
-    app.setApplicationName("QQ炫舞 3.0 - {}".format(mode_name))
+    app.setApplicationName("{} - {}".format(display_name(), mode_name))
     hotkeys = HotkeyService()
     redirector = LogRedirector()
     stream = redirector.install()
@@ -62,7 +63,7 @@ def main(test_mode: bool = False) -> int:
     sys.excepthook = handle_exception
     window.show()
     hotkeys.register()
-    print("[系统] QQ炫舞 3.0 已就绪，页面当前选择：{}。".format(mode_name))
+    print("[系统] {} 已就绪，页面当前选择：{}。".format(display_name(), mode_name))
 
     try:
         return app.exec_()
